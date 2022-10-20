@@ -1,0 +1,85 @@
+.content .moudle-tabs{
+    width: 100%;
+    margin-top: 37px;
+    margin-bottom: 54px;
+}
+.content .moudle-tabs .tittle{
+    width: 100%;
+    height: 50px;
+    grid-template: 50px;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 28px;
+}
+.content .moudle-tabs .tittle span{
+    float: left;
+    height: 48px;
+    color: #999;
+    font-size: 16px;
+    line-height: 48px;
+    margin-right: 58px;
+    cursor: pointer;
+}
+.content .moudle-tabs .tittle .current{
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+.content .moudle-tabs .hot-tips{
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 18px;
+}
+.content .moudle-tabs .hot-tips i{
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-right: 14px;
+    color: #fff;
+    background-color: #e6e6e6;
+    text-align: center;
+    border-radius: 50%;
+}
+.content .moudle-tabs .hot-tips span{
+    float: left;
+    color: #999;
+    margin-right: 20px;
+}
+.content .moudle-tabs .hot-tips a{
+    float: left;
+    color: #00b38a;
+}
+.content .moudle-tabs .detail{
+    width: 100%;
+}
+.content .moudle-tabs .detail ul{
+    width: 1220px;
+    overflow: hidden;
+    display: none;
+}
+.content .moudle-tabs .detail ul.current{
+    display: block;
+}
+.content .moudle-tabs .detail ul li{
+    float: left;
+    width: 351px;
+    height: 178px;
+    padding:20px 18px 0 ;
+    border: 1px solid #eaeeed;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+.content .moudle-tabs .more{
+    display: block;
+    width: 387px;
+    height: 42px;
+    border: 1px solid #00b38a;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 42px;
+    color: #66b48b;
+    font-size: 16px;
+}
+.content .moudle-tabs .more:hover{
+    color: #fff;
+    background-color: #66b48b;
+}

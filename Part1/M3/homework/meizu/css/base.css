@@ -1,0 +1,16 @@
+body{
+    font-size: 14px;
+    font-family: 'PingFangSC-Regular,PingFang SC';
+    color: #666;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+    color: #0CBBEF;
+}
+.inner-c{
+    width: 1240px;
+    margin: 0 auto;
+}
