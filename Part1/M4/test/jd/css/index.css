@@ -1,0 +1,274 @@
+body{
+    min-width: 320px;
+    max-width: 540px;
+    margin: 0 auto;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: -apple-system,Helvetica,sans-serif;
+}
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+input{
+    -webkit-appearance: none;
+}
+img,a{
+    -webkit-touch-callout: none;
+}
+
+
+
+.top-tips{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background-color: #333; 
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.top-tips div{
+    float: left;
+}
+.top-tips div:nth-child(1){
+    width: 8%;
+}
+.top-tips div:nth-child(1) img{
+    width: 10px;
+    vertical-align: middle;
+}
+.top-tips div:nth-child(2){
+    width: 10%;
+}
+.top-tips div:nth-child(2) img{
+    width: 30px;
+    vertical-align: middle;
+}
+.top-tips div:nth-child(3){
+    width: 57%;
+}
+.top-tips div:nth-child(4){
+    width: 25%;
+    background-color: #f63515;
+}
+
+.searchbox{
+    position: fixed;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    z-index: 1;
+}
+.searchbox .search-btn{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 44px;
+    width: 40px;
+}
+.searchbox .search-btn span{
+    display: block;
+    width: 20px;
+    height: 18px;
+    margin: 14px 0 0 15px;
+    background: url(../images/s-btn.png) no-repeat ;
+    background-size: 20px 18px;
+}
+.searchbox .login{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+}
+.searchbox .search{
+    position: relative;
+    height: 30px;
+    margin: 7px 50px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.searchbox .search span{
+    position: relative;
+    float: left;
+    display: block;
+    width: 20px;
+    height: 15px;
+    margin: 8px 8px 0 15px;
+    background: url(../images/logo2.png) no-repeat;
+    background-size: 20px 15px;
+}
+.searchbox .search span::after{
+    position: absolute;
+    right: -8px;
+    content:"" ;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+}
+.searchbox .search i{
+    float: left;
+    display: block;
+    width: 18px;
+    height: 15px;
+    margin: 8px 0 0 15px;
+    background: url(../images/jd-sprites.png) no-repeat -82px 0;
+    background-size: 200px 200px;
+}
+.searchbox .search input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    padding: 0 20px 0 78px;
+    background-color: transparent;
+    border: none;
+}
+
+.content{
+    width: 100%;
+    margin-top: 45px;
+    background-color: #f6f6f6;
+}
+.content .banner{
+    position: relative;
+    width: 100%;
+    height: 187px;
+    overflow: hidden;
+}
+.content .banner .banner-bg{
+    position: absolute;
+    left: -25%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    width: 150%;
+    height: 145px;
+    background-image: linear-gradient(0deg,#f1503b,#c82519 50%);
+    background-color: aquamarine;
+}
+.content .banner ul {
+    position: relative;
+    list-style: none;
+    
+}
+.content .banner ul li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 187px;
+    padding: 44px 3.33% 0;
+    box-sizing: border-box;
+}
+.content .banner ul li:nth-child(2){
+    left: 100%;
+}
+.content .banner ul li:nth-child(3){
+    left: 200%;
+}
+.content .banner ul li:nth-child(4){
+    left: 300%;
+}
+.content .banner ul li a {
+    display: block;
+}
+.content .banner ul li a img{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.youhui{
+    width: 100%;
+    overflow: hidden;
+}
+.youhui a{
+    float: left;
+    width: 33.3333%;
+}
+.youhui a img{
+    display: block;
+    width: 100%;
+}
+nav{
+    position: relative;
+    width: 100%;
+    height: 162px;
+    overflow: hidden;
+}
+nav .mall-nav{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+nav .mall-nav-2{
+    left: 100%;
+}
+nav .mall-nav a{
+    float: left;
+    width: 20%;
+    text-decoration: none;
+    color: #666;
+    text-align: center;
+    font-size: 12px;
+}
+nav .mall-nav a img{
+    display: block;
+    width: 40px;
+
+    margin: 10px auto 0;
+}
+nav .mall-nav a span{
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    margin-top: 6px;
+}
+.new{
+    margin: 10px ;
+    overflow: hidden;
+}
+.new a{
+    float: left;
+    width: 50%;
+}
+.new a img{
+    display: block;
+    width: 100%;
+
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+footer ul{
+    /* width: 100%; */
+    margin: 0;
+    padding: 0;
+}
+footer ul li{
+    float: left;
+    list-style: none;
+    width: 20%;
+    height: 50px;
+}
+footer ul li a{
+    width: 100%;
+}
+footer ul li img{
+    display: block;
+    width: 100%;
+    height: 50px;
+}
