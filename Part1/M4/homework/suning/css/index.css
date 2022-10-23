@@ -56,3 +56,266 @@ html {
     font-size: 50px;
   }
 }
+body {
+  min-width: 320px;
+  width: 15rem;
+  background-color: #f2f2f2;
+}
+body .top-banner {
+  position: relative;
+  width: 15rem;
+  height: 2rem;
+}
+body .top-banner .banner-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+body .top-banner .banner-img img {
+  display: block;
+  width: 100%;
+}
+body .top-banner .close {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.1rem;
+  background: url(../images/close.png) no-repeat center center;
+  background-size: 0.6rem auto;
+}
+body header {
+  width: 15rem;
+  height: 3.6rem;
+  background-color: #ffdb47;
+}
+body header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 13.64rem;
+  height: 1.76rem;
+  padding: 0 0.68rem;
+}
+body header .top a:nth-child(1) img {
+  display: block;
+  width: 0.72rem;
+  height: 1.2rem;
+}
+body header .top a:nth-child(2) img {
+  display: block;
+  width: 9rem;
+  height: 1.2rem;
+}
+body header .top a:nth-child(3) img {
+  display: block;
+  width: 0.72rem;
+  height: 1.2rem;
+}
+body header .bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 1.84rem;
+  padding: 0 0.84rem;
+  box-sizing: border-box;
+}
+body header .bottom i {
+  position: absolute;
+  width: 0.72rem;
+  height: 0.72rem;
+  top: 0.52rem;
+  left: 1.3rem;
+  background: url(../images/search_btn.png) no-repeat 0 0;
+  background-size: 0.72rem auto;
+}
+body header .bottom input {
+  width: 14.04rem;
+  height: 1.28rem;
+  box-sizing: border-box;
+  padding: 0.06rem 0.4rem 0 1.3rem;
+  border: 0;
+  font-size: 0.56rem;
+  line-height: 1.28rem;
+  border-radius: 0.64rem;
+}
+body .banner {
+  width: 15rem;
+  height: 5.2rem;
+  background: url(../images/banner_bg.png) no-repeat 0 0;
+  background-size: 15rem auto;
+}
+body .banner .wrapper {
+  width: 14.04rem;
+  height: 5.2rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+body .banner .wrapper ul {
+  position: relative;
+  width: 40rem;
+  height: 5.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body .banner .wrapper ul .current {
+  left: 0;
+}
+body .banner .wrapper ul li {
+  position: absolute;
+  top: 0;
+  left: 14.04rem;
+}
+body .banner .wrapper ul li a img {
+  width: 14.04rem;
+  height: 5.2rem;
+  border-radius: 0.48rem;
+}
+body nav {
+  width: 15rem;
+  height: 6.16rem;
+}
+body nav a {
+  float: left;
+  width: 3rem;
+  height: 2.84rem;
+  text-decoration: none;
+  font-size: 0.44rem;
+  color: #666;
+}
+body nav a img {
+  display: block;
+  width: 1.68rem;
+  height: 1.68rem;
+  margin: 0.48rem auto 0;
+}
+body nav a p {
+  text-align: center;
+  margin-top: 0.1rem;
+}
+body .content {
+  padding-bottom: 3.84rem;
+  width: 15rem;
+}
+body .content .guess a img {
+  height: 1.2rem;
+  width: 15rem;
+}
+body .content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+body .content ul li {
+  padding: 5px;
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+body .content ul li a {
+  display: block;
+  width: 100%;
+}
+body .content ul li a img {
+  display: block;
+  width: 175px;
+  margin: 0 auto;
+  border-top-left-radius: 8px ;
+  border-top-right-radius: 8px;
+}
+body .content ul li .info {
+  padding: 0.4rem;
+  background-color: #fff;
+  font-size: 0.52rem;
+}
+body .content ul li .info .name p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+body .content ul li .info .tag {
+  display: flex;
+  align-items: center;
+  width: 5.38rem;
+  height: 0.48rem;
+  justify-content: flex-start;
+  margin: 0.22rem 0.24rem 0.48rem;
+}
+body .content ul li .info .tag img {
+  width: 0.96rem;
+  height: 0.48rem;
+  margin-right: 0.12rem;
+}
+body .content ul li .info .tag span {
+  padding: 0.04rem 0.24rem;
+  font-size: 0.36rem;
+  line-height: 0.4rem;
+  border-radius: 0.12rem;
+  background-color: #FEFBEE;
+  border: 1px solid #FFBB00;
+}
+body .content ul li .info .price {
+  display: flex;
+  font-size: 18px;
+  color: #FF4422;
+  font-weight: bold;
+  align-items: flex-end;
+  font-size: 0.48rem;
+}
+body .content ul li .info .price .pre-price {
+  font-size: 0.72rem;
+  line-height: 0.72rem;
+}
+body .content ul li .info .price .comments {
+  color: #999;
+  margin-left: 0.26rem;
+  font-weight: normal;
+}
+body .tologin {
+  position: fixed;
+  bottom: 2.04rem;
+  left: 0;
+  width: 15rem;
+  height: 1.8rem;
+}
+body .tologin a img {
+  width: 15rem;
+  height: 1.8rem;
+}
+body footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 15rem;
+  height: 2.04rem;
+  background-color: #fff;
+}
+body footer a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+body footer a img {
+  width: 0.96rem;
+  height: 0.96rem;
+}
+body footer a span {
+  font-size: 0.4rem;
+  line-height: 0.64rem;
+  color: #666;
+}
+body footer .current span {
+  color: #000;
+  font-weight: bold;
+}
