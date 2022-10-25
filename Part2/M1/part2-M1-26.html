@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34</title>
+    <script>
+        var x = prompt('请输入月份')
+        console.log(x);
+        switch (parseInt(x)) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                alert(x + '月有31天')
+                break;
+            case 2:
+                var y = prompt('请输入年份')
+                if(y % 4 == 0){
+                    alert(y + '年2月有29天')
+                }else{
+                    alert('2月有28天')
+                }
+                break
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert(x + '月有30天')
+                break
+        }   
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27</title>
+    <script>
+        for(var j = 1;j <= 10000;j++){
+            var sum = 0
+            for(var i = 0;i <= parseInt(j / 2);i++){
+                if(j % i == 0){
+                    sum++
+                }
+            }
+            if(sum == 1) console.log(j);
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
