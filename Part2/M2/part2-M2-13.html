@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13</title>
+    <script>
+        var obj = {}
+        var arr = ['a','a','a','b','b','c','c','c','c','d','d','d','d']
+        for(var i = 0;i < arr.length;i++){
+            if(!obj[arr[i]]){
+                obj[arr[i]] = 1
+            }
+            if(Object.hasOwn(obj,arr[i])){
+                obj[arr[i]]++
+            }
+        }
+        console.log(obj);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

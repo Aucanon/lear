@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+    <script>
+        var str = 'i love javascript very much'
+        var temp = str.split(" ")
+        console.log(temp);
+        var res = ''
+        for(var i = 0;i < temp.length;i++){
+            res += temp[i].replace(temp[i].substring(0,1),temp[i].substring(0,1).toUpperCase()) + ' '
+        }
+        console.log(res);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

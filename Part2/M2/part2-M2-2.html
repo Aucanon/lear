@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <script>
+        for(var i = 100;i <=999;i++){
+            var ge = i % 10
+            var shi = parseInt((i / 10) % 10)
+            var bai = parseInt(i / 100)
+            // console.log(ge,shi,bai);
+            var sum = jie(ge) + jie(shi) + jie(bai)
+            if(i === sum) console.log(i);
+        }
+        function jie(x){
+            var res = 1
+            for(var j = 1;j <= x;j++){
+                res *= j
+            }
+            // console.log(res);
+            return res
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

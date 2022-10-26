@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+    <script>
+        var list = [10,15,20,9,5,41,13,11,11,51]
+        var max = list[0]
+        var min = list[0]
+        var maxIndex = 0,minIndex = 0
+        for(var i = 0;i < list.length;i++){
+            
+            if(list[i] > max){
+                max = list[i]
+                maxIndex = i
+            }
+            if(list[i] < min){
+                minIndex = i
+                min = list[i]
+            }
+        }
+        console.log(max,min,maxIndex,minIndex);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
