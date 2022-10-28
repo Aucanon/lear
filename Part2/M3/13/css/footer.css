@@ -1,0 +1,69 @@
+.footer{
+    width: 100%;
+    height: 138px;
+    padding-top: 50px;
+    padding-bottom: 65px;
+}
+.footer .left{
+    float: left;
+    width: 312px;
+    height: 138px;
+    border-right: 1px solid #e8e8e8;
+}
+.footer .left a{
+    display: block;
+    width: 180px;
+    height: 40px;
+    border: 1px solid #00b38a;
+    color: #00b38a;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 16px;
+}
+.footer .left a:hover{
+    background-color: #00b38a;
+    color: #fff;
+}
+.footer .left .download .app{
+    display: inline-block;
+    width: 12px;
+    height: 15px;
+    vertical-align: middle;
+    background: url(../images/sprite_02.png) no-repeat -150px -220px;
+}
+.footer .left .minipro .minip{
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    vertical-align: middle;
+    background: url(../images/sprite_02.png) no-repeat -214px -54px;
+}
+.footer .left .download:hover .app{
+    background-position: -182px -220px;
+}
+.footer .left .minipro:hover .minip{
+    background-position: -172px -54px;
+}
+.footer .right{
+    float: left;
+    width: 757px;
+    height: 138px;
+    padding-left: 130px;
+}
+.footer .right dl{
+    float: left;
+    width: 252px;
+}
+.footer .right dl dt{
+    height: 23px;
+    line-height: 23px;
+    color: #555;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+.footer .right dl dd a{
+    display: block;
+    height: 32px;
+    line-height: 32px;
+}

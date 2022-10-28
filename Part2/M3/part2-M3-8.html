@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            position: absolute;
+            width: 100px;
+            left: 0;
+            height: 100px;
+            background-color: aquamarine;
+        }
+        button{
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="start">开始</button>
+    <button id="stop">停止</button>
+
+    <script>
+        var timer = null
+        var nowLeft = 0
+        var flag = false
+        var box = document.getElementById("box")
+        var start = document.getElementById("start")
+        var stop = document.getElementById("stop")
+        start.addEventListener('click',function(){
+            clearInterval(timer)
+            timer = setInterval(()=>{
+                nowLeft += 10
+                box.style.left = nowLeft + 'px'
+            },1000)
+        })
+
+        stop.addEventListener('click',function(){
+            clearInterval(timer)
+        })
+
+    </script>
+</body>
+</html>

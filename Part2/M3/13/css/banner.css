@@ -1,0 +1,137 @@
+.banner{
+    width: 100%;
+    height: 120px;
+    background-color: #00b38a;
+}
+.banner .banner-main{
+    padding-top: 37px;
+    height: 83px;
+    background: url(../images/logo_ad.png) no-repeat left bottom;
+    background-size: 220px 120px;
+}
+.banner .banner-main .left{
+    float: left;
+    cursor: default;
+    padding-left: 237px;
+}
+.banner .banner-main .left img{
+    /* display: block; */
+    width: 330px;
+    height: 30px;
+}
+.banner .banner-main .left p{
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+}
+.banner .banner-main .right{
+    float: right;
+}
+.banner .banner-main .right .tel{
+    float: left;
+    background-color: #fff;
+    height: 35px;
+    width: 212px;
+    /* line-height: 35px; */
+    margin-right: 8px;
+}
+.banner .banner-main .right .tel .code{
+    float: left;
+    position: relative;
+    width: 66px;
+    height: 35px;
+}
+.banner .banner-main .right .tel .code:hover .code-list{
+    display: block;
+}
+.banner .banner-main .right .tel .code .default{
+    display: block;
+    width: 56px;
+    height: 35px;
+    padding-left: 10px;
+    color: #999;
+    line-height: 35px;
+    cursor: pointer;
+    background: url(../images/arrow_down_small.png) no-repeat right center;
+}
+.banner .banner-main .right .tel .code .code-list{
+    width: 214px;
+    height: 288px;
+    overflow: auto;
+    display: none;
+}
+.banner .banner-main .right .tel .code .code-list dt{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 12px;
+    background-color: #fbfbfb;
+}
+.banner .banner-main .right .tel .code .code-list dd{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 12px;
+    background-color: #fff;
+}
+.banner .banner-main .right .tel .code .code-list dd span{
+    float: right;
+    padding-right: 10px;
+}
+.banner .banner-main .right .tel .code .code-list dd:hover{
+    background-color: #f4f4f4;
+    color: #66B48B;
+}
+.banner .banner-main .right .tel .code .code-list p{
+    color: #B5B5B5;
+    line-height: 22px;
+    padding: 30px 13px;
+}
+.banner .banner-main .right .tel .phone-number{
+    float: left;
+    width: 136px;
+    height: 35px;
+    padding-left: 10px;
+}
+.banner .banner-main .right .yzm{
+    float: left;
+    width: 146px;
+    height: 35px;
+    margin-right: 8px;
+    background-color: #fff;
+}
+.banner .banner-main .right .yzm .yzm-code{
+    float: left;
+    width: 80px;
+    height: 35px;
+    padding-left: 10px;
+}
+.banner .banner-main .right .yzm i{
+    float: left;
+    width: 8px;
+    height: 35px;
+    line-height: 35px;
+    color: #d5dadf;
+    text-align: center;
+}
+.banner .banner-main .right .yzm span{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 5px;
+    text-align: center;
+    color: #00b38a;
+    cursor: pointer;
+}
+.banner .banner-main .right .login{
+    float: left;
+    width: 105px;
+    height: 33px;
+    line-height: 33px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    background-color: #00b38a;
+}
+.banner .banner-main .right .login:hover{
+    background-color: #85C3A2;
+}

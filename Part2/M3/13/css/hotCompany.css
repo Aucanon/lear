@@ -1,0 +1,57 @@
+.content .hot-company .detail ul li{
+    width: 260px;
+    height: 248px;
+    padding:20px 13px 0 ;
+}
+.content .hot-company .detail ul li .top{
+    width: 260px;
+    height: 181px;
+    border-bottom: 1px dashed #e0e0e0;
+    line-height: 24px;
+    text-align: center;
+}
+.content .hot-company .detail ul li .top a {
+
+}
+.content .hot-company .detail ul li .top a img{
+    width: 80px;
+    height: 80px;
+}
+.content .hot-company .detail ul li .top h4{
+    font-size: 16px;
+}
+.content .hot-company .detail ul li .top .label{
+    color: #999;
+    margin-bottom: 5px;
+}
+.content .hot-company .detail ul li .top .info{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content .hot-company .detail ul li .bottom{
+    height: 30px;
+    margin-top: 15px;
+}
+.content .hot-company .detail ul li .bottom a{
+    float: left;
+    width: 76px;
+    height: 30px;
+    text-align: center;
+    border-right: 1px solid #ededed;
+}
+.content .hot-company .detail ul li .bottom a .data{
+    color: #00b38a;
+    font-size: 14px;
+}
+.content .hot-company .detail ul li .bottom a .name{
+    font-size: 12px;
+    line-height: 12px;
+}
+.content .hot-company .detail ul li .bottom .item2{
+    width: 89px;
+}
+.content .hot-company .detail ul li .bottom .item3{
+    border: none;
+    width: 91px;
+}

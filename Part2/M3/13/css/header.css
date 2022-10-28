@@ -1,0 +1,130 @@
+.header{
+    width: 100%;
+    height: 40px;
+    background-color: #32373E;
+    line-height: 40px;
+}
+.header .left h1{
+    float: left;
+    padding-top: 8px;
+    width: 43px;
+    height: 31px;
+}
+.header .left h1 a{
+    display: block;
+    width: 43px;
+    height: 21px;
+    background: url(../images/logo.png);
+    text-indent: 999em;
+    overflow: hidden;
+}
+.header .left .city{
+    float: left;
+    width: 110px;
+    margin: 0 34px;
+    font-size: 12px;
+}
+.header .left .city:hover{
+    cursor: pointer;
+}
+.header .left .city span{
+    color: #20CA92;
+    margin-right: 12px;
+}
+.header .left .city i{
+    color: #AFB5C0;
+}
+.header .left .city:hover i{
+    color: #fff;
+}
+.header .left .nav{
+    float: left;
+    /* width: 458px; */
+}
+.header .left .nav li{
+    float: left;
+}
+.header .left .nav li a{
+    display: block;
+    position: relative;
+    padding: 0 20px;
+    color: #AFB5C0;
+}
+.header .left .nav li a:hover{
+    color: #fff;
+}
+.header .left .nav .current a{
+    background-color: #24282C;
+    color: #fff;
+}
+.header .left .nav li a .new{
+    position: absolute;
+    top: 3px;
+    right: -5px;
+    width: 30px;
+    height: 18px;
+    line-height: 18px;
+    background-color: #FF7452;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+.header .right{
+    float: right;
+}
+.header .right a{
+    float: left;
+    color: #AFB5C0;
+}
+.header .right a:hover{
+    color: #fff;
+}
+.header .right .upload{
+    margin-right: 25px;
+}
+.header .right .position{
+    margin-right: 66px;
+}
+.header .right .denglu{
+    position: relative;
+    padding-left: 25px;
+}
+.header .right .denglu .login{
+    position: absolute;
+    top: 11px;
+    left: -5px;
+    width: 18px;
+    height: 18px;
+    background: url(../images/sprite_01.png) no-repeat -76px -136px;
+}
+.header .right .denglu:hover .login{
+    background-position: -76px -174px;
+}
+.header .right span{
+    float: left;
+    color:#AFB5C0 ;
+    margin: 0 8px;
+}
+.header .right .register{
+    margin-right: 52px;
+}
+.header .right .lagou{
+    position: relative;
+    margin-right: 20px;
+    color: #00C295;
+}
+.header .right .lagou .app{
+    position: absolute;
+    top: 11px;
+    left: -22px;
+    width: 12px;
+    height: 18px;
+    background: url(../images/sprite_01.png) no-repeat -64px -212px;
+}
+.header .right .lagou:hover{
+    color:#81DEAF;
+}
+.header .right .lagou:hover .app{
+    background-position: -96px -212px;
+}
