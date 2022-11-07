@@ -1,0 +1,65 @@
+{
+  "pages":[
+    "pages/home/index",
+    "pages/home/city",
+
+    "pages/qweather/index",
+    "pages/qweather/map",
+
+    "pages/camera/index",
+    "pages/camera/test",
+
+    "pages/index/index",
+    "pages/logs/logs",
+    
+    "pages/route/walking",
+    "pages/route/bike",
+    "pages/route/car",
+    "pages/route/bus"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#00b38a",
+    "navigationBarTitleText": "Demo",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/home/index",
+      "text": "首页",
+      "iconPath": "static/images/marker.png",
+      "selectedIconPath": "static/images/marker_checked.png"
+    },
+      {
+      "pagePath": "pages/qweather/index",
+      "text": "天气",
+      "iconPath": "static/images/featured.png",
+      "selectedIconPath": "static/images/featured-actived.png"
+    },
+      {
+      "pagePath": "pages/camera/index",
+      "text": "相机",
+      "iconPath": "static/images/search.png",
+      "selectedIconPath": "static/images/search-actived.png"
+    },
+      {
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "static/images/profile.png",
+      "selectedIconPath": "static/images/profile-actived.png"
+    }
+
+  ]
+  },
+
+  "permission": {
+    "scope.userLocation": {
+      "desc": "尝试获取您的位置信息"
+    }
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

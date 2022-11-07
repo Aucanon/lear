@@ -1,0 +1,112 @@
+<!--pages/qweather/index.wxml-->
+<view class="page">
+	<view class="page__hd">
+		<view class="page__title">周边</view>
+	</view>
+	<view class="weui-grids">
+		<navigator data-keyword="美食" bindtap="doSearch" url="javascript:" class="weui-grid" aria-role="button">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">美食</view>
+		</navigator>
+		<navigator data-keyword="酒店" bindtap="doSearch" url="javascript:" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">酒店</view>
+		</navigator>
+		<navigator data-keyword="加油站" bindtap="doSearch" url="javascript:" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">加油站</view>
+		</navigator>
+		<navigator data-keyword="银行" bindtap="doSearch" url="javascript:" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">银行</view>
+		</navigator>
+		<navigator data-keyword="地铁" bindtap="doSearch" url="javascript:" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">地铁</view>
+		</navigator>
+		<navigator data-keyword="公交" bindtap="doSearch" url="javascript:" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">公交</view>
+		</navigator>
+		<navigator data-keyword="医院" bindtap="doSearch" url="javascript:" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">医院</view>
+		</navigator>
+		<navigator data-keyword="公园" bindtap="doSearch" url="javascript:" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">公园</view>
+		</navigator>
+</view>
+
+  <view class="page__hd">
+		<view class="page__title">{{citylist.adm2}}</view>
+		<view class="page__desc">{{citylist.adm1}}</view>
+	</view>
+	<view class="page__bd">
+		<view class="weui-panel weui-panel_access">
+			<view class="weui-panel__hd">未来三天的天气</view>
+			<view class="weui-panel__bd">
+				<a class="weui-media-box weui-media-box_appmsg" wx:for="{{wd.daily}}" wx:key="unique">
+					<view class="weui-media-box__hd">
+						<image class="weui-media-box__thumb" src="../../static/WeatherIcon-master/weather-icon-S1/color-128/{{item.iconDay}}.png" alt></image>
+					</view>
+					<view class="weui-media-box__bd">
+						<h4 class="weui-media-box__title">{{item.fxDate}} {{item.textDay}}</h4>
+						<view class="weui-media-box__desc">
+              <text>温度：{{item.tempMin}} - {{item.tempMax}}\n</text>
+              <text>{{item.windDirDay}} {{item.windScaleDay}} 级 </text>
+            </view>
+					</view>
+        </a>
+			</view>
+    </view>
+
+    <!-- 生活指数 -->
+    <view class="weui-panel weui-panel_access">
+			<view class="weui-panel__hd">生活指数</view>
+			<view class="weui-panel__bd">
+
+        <view class="weui-media-box weui-media-box_text" wx:for="{{indices}}" wx:key="unique">
+					<h4 class="weui-media-box__title">{{item.name}} ：{{item.category}}</h4>
+          <view class="weui-media-box__desc">{{item.text}}</view>
+					<view class="weui-media-box__info">
+						<view class="weui-media-box__info__meta">时间：{{item.date}}</view>
+					</view>
+				</view>
+			</view>
+    </view>
+
+    <!-- 空气质量 -->
+    <view class="weui-panel weui-panel_access">
+			<view class="weui-panel__hd">空气质量</view>
+			<view class="weui-panel__bd">
+
+        <view class="weui-media-box weui-media-box_text">
+					<h4 class="weui-media-box__title">空气质量：{{aircond.category}}</h4>
+          <view class="weui-media-box__desc">空气质量指数：{{aircond.aqi}}</view>
+          <view class="weui-media-box__desc">PM2.5：{{aircond.pm2p5}}</view>
+          <view class="weui-media-box__desc">主要污染物: {{aircond.primary}}</view>
+					<view class="weui-media-box__info">
+						<view class="weui-media-box__info__meta">时间：{{aircond.pubTime}}</view>
+					</view>
+				</view>
+			</view>
+    </view>
+  </view>
+</view>
