@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            float: left;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="img/1.jpeg" alt="">
+        <img src="img/1.jpeg" alt="">
+        <img src="img/1.jpeg" alt="">
+        <img src="img/1.jpeg" alt="">
+        <img src="img/1.jpeg" alt="">
+    </div>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        const $img = $('img')
+        $img.on('mouseenter',function(e){
+            $(this).addClass('current').attr('src','img/2.jpeg').prevAll().attr('src','img/2.jpeg')
+        })
+        $img.on('mouseleave',function(e){
+            $(this).addClass('current').attr('src','img/1.jpeg').prevAll().attr('src','img/1.jpeg')
+        })
+
+    </script>
+</body>
+</html>

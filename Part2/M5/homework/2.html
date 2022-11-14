@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input type="text" class="ipt1">
+    <select name="" id="">
+        <option value="请选择">请选择</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" class="ipt2">
+    <input type="button" value="=" class="btn">
+    <input type="text" class="res">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        const $ipt1 = $('.ipt1')
+        const $ipt2 = $('.ipt2')
+        const $select = $('select')
+        const $btn = $('.btn')
+        const $res = $('.res')
+        $btn.on('click',()=>{
+            switch($select.val()){
+                case '+':
+                $res.val(parseFloat($ipt1.val()) + parseFloat($ipt2.val()))
+                break
+                case '-':
+                $res.val(parseFloat($ipt1.val()) - parseFloat($ipt2.val()))
+                break
+                case '*':
+                $res.val(parseFloat($ipt1.val()) * parseFloat($ipt2.val()))
+                break
+                case '/':
+                $res.val(parseFloat($ipt1.val()) / parseFloat($ipt2.val()))
+                break
+            }
+        })
+    </script>
+</body>
+</html>

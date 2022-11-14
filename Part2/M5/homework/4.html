@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <style>
+       * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .slider {
+      height: 340px;
+      width: 790px;
+      margin: 100px auto;
+    }
+
+    .slider ul{
+        height: 340px;
+        width: 790px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+    }
+
+    /* ul:hover{
+        -webkit-transform: rotateX(-90deg) ;
+    } */
+
+    .slider ul li {
+      position: absolute;
+      left: 0;
+	  top: 0;
+      height: 340px;
+      width: 790px;
+    }
+
+    .slider ul li:nth-child(1){
+        transform: translateZ(170px);
+    }
+    .slider ul li:nth-child(2){
+        transform: rotateX(90deg) translateZ(170px);
+    }
+    .slider ul li:nth-child(3){
+        transform: rotateX(180deg) translateZ(170px);
+    }
+    .slider ul li:nth-child(4){
+        transform: rotateX(270deg) translateZ(170px);
+    }
+
+    .btn{
+        display: block;
+        margin: 0 auto;
+    } 
+    
+    </style>
+</head>
+<body>
+    <div class="slider">
+       <ul>
+        <li><a href=""><img src="img/jd1.jpg" alt=""></a></li>
+        <li><a href=""><img src="img/jd2.jpg" alt=""></a></li>
+        <li><a href=""><img src="img/jd3.jpg" alt=""></a></li>
+        <li><a href=""><img src="img/jd4.jpg" alt=""></a></li>
+       </ul>
+    </div>
+    <input type="button" value="下一张" class="btn">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        var $ul = $('ul')
+        var flag = true
+        var index = 90
+        $('.btn').click(() => {
+            if(flag){
+                flag = false
+                $ul.css('-webkit-transform',`rotateX(-${index}deg)`)
+                index += 90
+                setTimeout(() => {
+                    flag = true
+                },500)
+            }
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            padding-left: 200px;
+            background-color: rgb(242, 110, 53);
+            border-bottom: 5px solid rgb(3, 111, 16);
+        }
+        .name{
+            display: block;
+            margin: 10px 0;
+        }
+        span{
+            margin-right: 10px;
+        }
+        p{
+            margin: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        昵称：<input type="text" class="name">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <input type="checkbox" name="" id="check">匿名
+        <input type="button" value="发表" class="btn">
+        
+    </div>
+    <div class="common"></div>
+
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        const $name = $('.name')
+        const $text = $('textarea')
+        const $check = $('#check')
+        const $btn = $('.btn')   
+
+        $btn.on('click',() => {
+            let myDate = new Date()
+            let h = myDate.getHours()
+            let f = '上午'
+            let m = myDate.getMinutes()
+            let s = myDate.getSeconds()
+            if(h > 12){
+                h -= 12
+                f = '下午'
+            }
+            if(m < 10){
+                m.toString()
+                m = `0${m}`
+            }
+            if(s < 10){
+                s.toString()
+                s = `0${s}`
+            }
+            if($check.is(':checked')){
+                if(!$name.val() || !$text.val()){
+                alert('昵称和内容不能为空')
+                }else{
+                    $('.common').append(`<span>路人甲</span><span>${f}${h}:${m}:${s}</span><p>${$text.val()}</p>`);
+                    $name.val('')
+                    $text.val('')
+                }
+            }else{
+                if(!$name.val() || !$text.val()){
+                alert('昵称和内容不能为空')
+                }else{
+                    $('.common').append(`<span>${$name.val()}</span><span>${f}${h}:${m}:${s}</span><p>${$text.val()}</p>`);
+                    $name.val('')
+                    $text.val('')
+                }
+            }
+            
+        })
+
+    </script>
+</body>
+</html>
