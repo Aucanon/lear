@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/template-native.js"></script>
+
+    <script id="templete" type="text/html">
+        <% for(var i = 0;i < comments.length;i++){ %>
+            <li uid="<%= comments[i].id %>">
+                <p class="floor"><%= comments[i].id %></a>楼<input type="button" value="删除" class="delete"></p>
+                <p class="fauthor">层主：<span><%= comments[i].username %></span></p>
+                <p class="content"><%= comments[i].content %></p>
+            </li>
+        <% } %>
+    </script>
+
+</head>
+<body>
+    <div class="box">
+        <div class="up">
+            <h2>upupup</h2>
+            <p class="lauthor">楼主：张三</p>
+            <p class="text">祝你生日快乐，快快乐！</p>
+        </div>
+        <div class="reply">
+            <h3>发表评论</h3>
+            <p>用户名：<input type="text" class="username"></p>
+            <textarea name="" id="" cols="30" rows="10" class="usertext"></textarea>
+            <input type="button" value="发布" class="btn">
+        </div>
+        <div class="comment">
+            <ul class="cmtitem">
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const $username = $('.username')
+        const $usertext = $('.usertext')
+        const $btn = $('.btn')
+        const $cmtitem = $('.cmtitem')
+
+        $.get('http://localhost:3000/db',(res) => {
+            console.log(res);
+            $cmtitem.html(template('templete',res))
+            deleteData()
+        })
+
+        $btn.click(() => {
+            const username = $username.val()
+            const content = $usertext.val()
+            $.post('http://localhost:3000/comments',{username,content},(res) => {
+                console.log(res);
+                $cmtitem.append(template('templete',{'comments':[res]}))
+                deleteData()
+            })
+            $username.val('')
+            $usertext.val('')
+        })
+        
+        function deleteData(){
+            $('.delete').click(function() {
+                const $li = $(this).parents('li')
+                const index = $li.attr('uid')
+                $.ajax({
+                    url:'http://localhost:3000/comments/' + index,
+                    type:'DELETE'
+                })
+                $li.remove()
+            })
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "username": "张三",
+      "content": "不擦的"
+    },
+    {
+      "id": 2,
+      "username": "李四",
+      "content": "水电费地方"
+    },
+    {
+      "id": 3,
+      "username": "王五",
+      "content": "阿双方各~"
+    },
+    {
+      "username": "qwe",
+      "content": "ee",
+      "id": 4
+    }
+  ]
+}
