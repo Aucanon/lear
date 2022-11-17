@@ -4,6 +4,8 @@ const StyleLintPlugin = require('stylelint-webpack-plugin')
 const CssMiniMizer = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const EslintPlugin = require('eslint-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     //打包模式
@@ -39,7 +41,13 @@ module.exports = {
                     },
 
                     //2.css-loader按commonjs规范将样式文件输出到js中
-                    'css-loader',
+                    // 'css-loader',
+                    {
+                        loader:'css-loader',
+                        options:{
+                            esModule:false
+                        }
+                    },
 
                     //1通过postcss-loader给样式属性添加浏览器前缀
                     'postcss-loader'
@@ -62,7 +70,13 @@ module.exports = {
                     },
 
                     //3.css-loader按commonjs规范将样式文件输出到js中
-                    'css-loader',
+                    // 'css-loader',
+                    {
+                        loader:'css-loader',
+                        options:{
+                            esModule:false
+                        }
+                    },
 
                     //2通过postcss-loader给样式属性添加浏览器前缀
                     'postcss-loader',
@@ -102,8 +116,9 @@ module.exports = {
                 use:{
                     loader:'url-loader',
                     options:{
-                        // limit: 2 * 1024, // 2 kb 设置图⽚⼤⼩，⼩于该数值的图⽚会被转成 base64
-                        name: "images/[name].[ext]"
+                        limit: 8 * 1024, // 2 kb 设置图⽚⼤⼩，⼩于该数值的图⽚会被转成 base64
+                        name: "images/[name].[ext]",
+                        esModule: false
                     }
                 }
                 // use: {
@@ -119,6 +134,24 @@ module.exports = {
                 //     esModule: false
                 //   }
                 // }
+            },
+            {
+                test:/\.(htm|html)$/i,
+                use:{
+                    loader:'html-loader',
+                    options:{
+                        esModule: false
+                    }
+                }
+            },
+            {
+                test:/\.(eot|svg|ttf|woff|woff2)$/i,
+                use:{
+                    loader:'file-loader',
+                    options:{
+                        name:'fonts/[name].[ext]'
+                    }
+                }
             }
         ]
     },
@@ -143,7 +176,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             //指定生成html的模板
             filename:'index.html',
-            template:'./src/index.html' ,
+            template:'./src/index.ejs' ,
             title:'webwebpack',
             minify:{
                 collapseWhitespace:true,
@@ -158,7 +191,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             //指定生成html的模板
             filename:'about.html',
-            template:'./src/index.html' ,
+            template:'./src/index.ejs' ,
             title:'abbbout',
             minify:{
                 collapseWhitespace:true,
@@ -173,7 +206,18 @@ module.exports = {
         new EslintPlugin({
             //自动解决常规代码格式报错
             fix:true
-        })
+        }),
+        new CopyWebpackPlugin({
+            //将src不需要特殊处理的文件直接复制到输出目录中
+            patterns:[
+                {
+                    from:'src/public',
+                    to:'public'
+                }
+            ]
+        }),
+        //打包之前删除历史文件
+        new CleanWebpackPlugin({})
     ]
 
 }
