@@ -5,7 +5,7 @@ import './css/main.css';
 import './css/main.less';
 
 import boy from './image/xph.gif';
-
+// eslint-disable-next-line
 console.log(123);
 
 const showMsg = () => {
@@ -18,11 +18,12 @@ window.showMsg = showMsg;
 
 const p = new Promise((resolve) => {
   setTimeout(() => {
+    // eslint-disable-next-line
     console.log('ppppromise');
     resolve();
   }, 1000);
 });
-
+// eslint-disable-next-line
 console.log(p);
 
 // eslint-disable-next-line

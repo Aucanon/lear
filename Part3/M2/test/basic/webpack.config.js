@@ -113,13 +113,22 @@ module.exports = {
             },
             {
                 test:/\.(png|gif|jpe?g)$/i,
-                use:{
-                    loader:'url-loader',
-                    options:{
-                        limit: 8 * 1024, // 2 kb 设置图⽚⼤⼩，⼩于该数值的图⽚会被转成 base64
-                        name: "images/[name].[ext]",
-                        esModule: false
+                // use:{
+                //     loader:'url-loader',
+                //     options:{
+                //         limit: 8 * 1024, // 2 kb 设置图⽚⼤⼩，⼩于该数值的图⽚会被转成 base64
+                //         name: "images/[name].[ext]",
+                //         esModule: false
+                //     }
+                // }
+                type:'asset',
+                parser:{
+                    dataUrlCondition:{
+                        maxSize:8 * 1024//默认
                     }
+                },
+                generator:{
+                    filename:'image/[name][ext]'
                 }
                 // use: {
                 //   loader: "url-loader",
@@ -146,11 +155,22 @@ module.exports = {
             },
             {
                 test:/\.(eot|svg|ttf|woff|woff2)$/i,
-                use:{
-                    loader:'file-loader',
-                    options:{
-                        name:'fonts/[name].[ext]'
+                // use:{
+                //     loader:'file-loader',
+                //     options:{
+                //         name:'fonts/[name].[ext]'
+                //     }
+                // }
+                //使用资源处理字体文件
+
+                type:'asset',
+                parser:{
+                    dataUrlCondition:{
+                        maxSize:8 * 1024//默认
                     }
+                },
+                generator:{
+                    filename:'fonts/[name][ext]'
                 }
             }
         ]
@@ -158,8 +178,30 @@ module.exports = {
 
     //开发服务器
     devServer:{
-
+        //指定加载内容路径
+        static: {
+            directory: resolve(__dirname,'output'),
+          },
+          //启用gzip压缩
+          compress: true,
+          //指定端口号
+          port: 9000,
+          liveReload:true,
+          //配置代理
+          proxy:{
+            //http://localhost:9000/api
+            '/api':{
+                target:'https://api.github.com',
+                pathRewrite:{
+                    '^/api':''
+                },
+                //不能使用localhost:9000作为github的主机名
+                changeOrigin:true,
+            }
+          }
     },
+
+    target:'web',
 
     //插件配置
     plugins:[
