@@ -6,5 +6,6 @@ module.exports = function(source) {
     console.log('ooooo' + this.query.size);
     console.log('123'+source);
     const html = marked.parse(source)
+    // return `module.export = ${JSON.stringify(html)}`
     return html
 }
