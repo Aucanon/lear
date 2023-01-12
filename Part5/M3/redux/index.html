@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="increment">+1</button>
+  <span id="box">0</span>
+  <button id="decrement">-1</button>
+  <script src="myRedux.js"></script>
+  <script src="./middlewares/logger.js"></script>
+  <script src="./middlewares/thunk.js"></script>
+  <script>
+
+    function enhancer (createStore) {
+      return function (reducer, preloadedState) {
+        var store = createStore(reducer, preloadedState)
+        var dispatch = store.dispatch
+        function _dispatch (action) {
+          if (typeof action === 'function') {
+            return action(dispatch)
+          }
+          dispatch(dispatch)
+        }
+        return {
+          ...store,
+          dispatch: _dispatch
+        }
+      }
+    }
+
+    function counterReducer (state, action) {
+      switch (action.type) {
+        case 'increment':
+          return state + 1
+        case 'decrement':
+          return state - 1
+        default:
+          return state
+      }
+    }
+
+    var rootReducer = combineReducers({counter: counterReducer})
+
+    // 创建 store
+    // var store = createStore(reducer, 0, enhancer)
+    var store = createStore(rootReducer, {counter: 100}, applyMiddleware(logger, thunk))
+
+    // console.log(store);
+
+    var actions = bindActionCreators({ increment, decrement }, store.dispatch)
+
+    function increment () {
+      return { type: 'increment' }
+    }
+
+    function decrement () {
+      return { type: 'decrement' }
+    }
+
+    store.subscrib(function () {
+      // 获取最新状态
+      document.getElementById('box').innerHTML = store.getState().counter
+    })
+    // 触发 action +1
+    document.getElementById('increment').onclick = function () {
+      // logger -> thunk -> reducer
+      // store.dispatch({ type: 'increment' })
+      actions.increment()
+      // store.dispatch(function (dispatch) {
+      //   setTimeout(() => {
+      //     dispatch({ type: 'increment' })
+      //   }, 1000)
+      // })
+    }
+    // 触发 action -1
+    document.getElementById('decrement').onclick = function () {
+      // store.dispatch({ type: 'decrement' })
+      actions.decrement()
+    }
+
+  </script>
+</body>
+</html>
