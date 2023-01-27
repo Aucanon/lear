@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    canvas {
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="800" height="600" id="myCanvas">
+    浏览器版本过低
+  </canvas>
+  <script>
+    var myCanvas = document.getElementById('myCanvas')
+    var ctx = myCanvas.getContext('2d')
+    
+    // 绘制路径
+    ctx.beginPath();
+    // 起始点
+    ctx.moveTo(100, 100);
+    ctx.lineTo(200, 300);
+    ctx.lineTo(300, 300)
+    ctx.closePath();
+    ctx.strokeStyle = "green"
+    ctx.fillStyle='skyblue';
+    ctx.stroke();
+    ctx.fill()
+    
+    ctx.beginPath();
+    ctx.moveTo(400,400)
+    ctx.lineTo(500,400)
+    ctx.lineTo(500,500)
+    ctx.lineTo(400,500)
+    ctx.closePath()
+    
+    // 图形样式
+    ctx.lineWidth = 10
+    ctx.strokeStyle = "red"
+    ctx.fillStyle='pink';
+    
+    // 描边或填充
+    ctx.stroke();
+    ctx.fill()
+    
+  </script>
+</body>
+</html>

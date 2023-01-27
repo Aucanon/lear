@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    canvas {
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="800" height="600" id="myCanvas">
+    浏览器版本过低
+  </canvas>
+  <script>
+    var myCanvas = document.getElementById('myCanvas')
+    var ctx = myCanvas.getContext('2d')
+
+    ctx.beginPath();
+    
+    ctx.arc(200, 200, 100, 0, 1, true);
+    // ctx.arc(400, 400, 100, 0, Math.PI * 2, true);
+    ctx.lineWidth=10;
+    ctx.strokeStyle='red';
+    ctx.closePath();
+    ctx.stroke();
+    
+    
+    
+
+  </script>
+</body>
+</html>

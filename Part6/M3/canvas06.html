@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    canvas {
+      border: 1px solid red;
+      background: url(images/bg.png);
+    }
+  </style>
+</head>
+<body>
+  <canvas width="800" height="600" id="myCanvas">
+    浏览器版本过低
+  </canvas>
+  <script>
+    var myCanvas = document.getElementById('myCanvas')
+    var ctx = myCanvas.getContext('2d')
+
+  //   // 矩形移动  变形实现原理是移动原点
+  //   // ctx.translate(200, 200);
+  //   ctx.rotate(1);
+    
+  // ctx.fillRect(100,100,100,100);
+
+  // var x = 100
+  // var y = 100
+  // var w = 100
+  // var h = 100
+   
+  // 让矩形绕着自己中心店旋转
+
+  // // 改变原点位置
+  // // ctx.translate(150, 150);
+  // ctx.translate(x + w / 2, y + h / 2);
+  // // 旋转坐标轴
+  // ctx.rotate(1);
+  // ctx.fillRect(-w / 2,-h / 2,w,h);
+
+  ctx.lineWidth=2;
+  
+  ctx.strokeRect(100, 100, 50, 50);
+  // 缩放效果
+  ctx.scale(2, 2);
+  ctx.strokeRect(100, 100, 50, 50);
+
+  
+  
+    
+  </script>
+</body>
+</html>

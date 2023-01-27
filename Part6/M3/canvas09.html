@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    canvas {
+      border: 1px solid red;
+      background: url(images/bg.png);
+    }
+  </style>
+</head>
+<body>
+  <canvas width="800" height="600" id="myCanvas">
+    浏览器版本过低
+  </canvas>
+  <script>
+    var myCanvas = document.getElementById('myCanvas')
+    var ctx = myCanvas.getContext('2d')
+    
+    var x = 100
+
+    // // 开始运动
+    // var timer = setInterval(() => {
+    //   x += 5
+    //   ctx.clearRect(0, 0, 800, 600);
+      
+    //   ctx.fillRect(x,100,100,100);
+    // }, 50)
+
+    var image = new Image()
+    image.src = "images/shibing.png"
+    var sx = 0
+    var dx = 0
+    var timer  = null
+    image.onload = function () {
+      timer = setInterval(() => {
+        sx += 120
+        dx += 10
+        if (sx >= 960) {
+          sx = 0
+        }
+        if (dx >= 800) {
+          dx = 0
+        }
+        ctx.clearRect(0, 0, 800, 600);
+        ctx.drawImage(image, sx, 450, 120, 150, dx, 100, 120, 150);
+      }, 200);
+    }
+
+  </script>
+</body>
+</html>
