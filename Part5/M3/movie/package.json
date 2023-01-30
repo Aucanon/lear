@@ -3,18 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon server/index.js",
+    "dev": "nodemon server/index",
     "build": "next build",
     "start": "next start",
     "export": "next build && next export"
   },
   "dependencies": {
-    "@chakra-ui/core": "^1.0.0-next.4",
-    "@chakra-ui/theme-tools": "^2.0.16",
+    "@chakra-ui/core": "^1.0.0-next.2",
+    "@chakra-ui/theme": "^1.0.0-next.2",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "axios": "^0.19.2",
-    "chakra-cli": "^1.0.1",
     "express": "^4.17.1",
     "next": "9.4.4",
     "nodemon": "^2.0.4",
